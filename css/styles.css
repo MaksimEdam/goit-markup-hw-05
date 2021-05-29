@@ -101,6 +101,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-mail-phone {
   margin-right: 50px;
@@ -126,6 +127,7 @@ body {
 .contact .contact-mail,
 .contact .contact-phone {
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*====================оформление секции героя ======================*/
 .hero {
@@ -160,6 +162,8 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
   padding: 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero .hero-button:hover,
 .hero .hero-button:focus {
@@ -287,6 +291,7 @@ body {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list {
   display: flex;
@@ -303,6 +308,7 @@ body {
   height: 44px;
   background-color: var(--title-text-color-footer);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -318,6 +324,7 @@ body {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-list {
   display: flex;
@@ -333,6 +340,7 @@ body {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-list-link:hover,
 .custom-list-link:focus {
@@ -401,6 +409,7 @@ body {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footeer-social-list {
   display: flex;
@@ -416,6 +425,7 @@ body {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footeer-social-list-link:hover,
 .footeer-social-list-link:focus {
@@ -450,6 +460,8 @@ body {
   padding: 6px 22px;
   border: 0;
   letter-spacing: 0.06em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -498,6 +510,7 @@ body {
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
   background: var(--title-text-color-footer);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-works-list:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -529,3 +542,52 @@ body {
   padding-bottom: 94px;
 }
 /*====================================Конец "Портфолио"====================================*/
+/*====================================Модальное окно===============*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--title-text-color-footer);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0px;
+}
+.modal-w-close {
+  width: 18px;
+  height: 18px;
+}
+
+/*====================================Конец модального окна===============*/
