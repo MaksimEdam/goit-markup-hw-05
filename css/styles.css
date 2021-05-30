@@ -72,8 +72,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .nav {
   display: flex;
@@ -100,6 +98,7 @@ body {
 }
 .menu .menu-link {
   position: relative;
+  display: block;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
